@@ -1,0 +1,36 @@
+<!--
+  Generated template for the Profil page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Vous</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <div id="profil">
+      <img src="https://i1.sndcdn.com/avatars-000071208256-dzuduk-t200x200.jpg" alt="">
+      <div class="info">
+        <p class="user-info">Germain Michaud</p>
+      </div>
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-tabs>
+    <ion-tab tabTitle="INFOS" [root]="infos"></ion-tab>
+    <ion-tab tabTitle="TITRES" [root]="titres"></ion-tab>
+    <ion-tab tabTitle="ABONNEMENTS" [root]="abonnements"></ion-tab>
+    <ion-tab tabTitle="ABONNES" [root]="abonnes"></ion-tab>
+  </ion-tabs>
+</ion-content>

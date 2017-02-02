@@ -1,0 +1,13 @@
+<button ion-button (click)="get()">Get tracks</button>
+<button ion-button (click)="play()">play</button>
+<button ion-button (click)="stop()">stop</button>
+<button ion-button (click)="next()">next</button>
+<track *ngFor="let track of tracks" [track]="track">
+<!--<ion-list>
+  <ion-item *ngFor="let track of tracks">
+    <ion-thumbnail item-left>
+      <img src="{{ track.thumbnail }}" alt="">
+    </ion-thumbnail>
+    <h2>{{ track.title }}</h2>
+  </ion-item>
+</ion-list>-->

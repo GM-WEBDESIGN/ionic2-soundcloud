@@ -1,0 +1,22 @@
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title>playlist</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <playlist></playlist>
+
+</ion-content>-->
+
+<ion-tabs>
+  <ion-tab tabIcon="home" [root]="playlist"></ion-tab>
+  <ion-tab tabIcon="search" [root]="search"></ion-tab>
+  <ion-tab tabIcon="heart" [root]="heart"></ion-tab>
+  <ion-tab tabIcon="menu" [root]="menu"></ion-tab>
+</ion-tabs>
+
+<player #player></player>

@@ -1,0 +1,33 @@
+page-menu {
+    .content {
+        background: #efefef;
+    }
+
+    #profil {
+        background: #fff;
+        margin-top: 15px;
+        img {
+            border-radius: 50%;
+            width: 100px;
+            box-shadow: 0 0 1px 1px rgba(51, 51, 51, 0.38);
+            margin: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .info {
+            display: inline-block;
+            vertical-align: middle;
+            .user-info {
+                font-size: 16px;
+                font-weight: 400;
+                margin: 0;
+            }
+            .goProfil {
+                color: #8e8e8e;
+                margin: 0;
+                margin-top: 5px;
+                font-weight: 100;
+            }
+        }
+    }
+}

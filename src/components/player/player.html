@@ -1,0 +1,38 @@
+<div id="player" #player [ngClass]="{'play': isPlaying}" [ngStyle]="{'background-image': 'url(' + getHigh(currentTrack.artwork_url) + ')'}">
+  <div id="background" [ngStyle]="{'background-image': 'url(' + getHigh(currentTrack.artwork_url) + ')'}"></div>
+  <div id="mask-player"></div>
+  <div class="borderTop"></div>
+  <header id="header-player">
+    <button ion-button clear id="play-pause-header" (click)="playPause()">
+      <ion-icon name="play" *ngIf="!isPlaying"></ion-icon>
+      <ion-icon name="pause" *ngIf="isPlaying"></ion-icon>
+    </button>
+    <div class="info">
+      <p class="artist">
+        {{ currentTrack.user.username }}
+      </p>
+      <br>
+      <p class="track">
+        {{ currentTrack.title }}
+      </p>
+    </div>
+    <button ion-button clear id="minimize">
+      <ion-icon name="arrow-down" md="ios-arrow-down"></ion-icon>
+    </button>
+  </header>
+  <div class="content-hidden">
+    <div id="progress">
+      <svg id="meter">
+        <circle id="meter-base" r="90" cx="50%" cy="50%" stroke="#FDE47F" stroke-width="15" fill="none"></circle>
+        <circle id="meter-change" r="90" cx="50%" cy="50%" stroke="#E04644" stroke-width="16" fill="none" #gauge></circle>
+      </svg>
+      <div class="center-icon">
+        <ion-icon name="play" *ngIf="!isPlaying"></ion-icon>
+        <ion-icon name="pause" *ngIf="isPlaying"></ion-icon>
+      </div>
+      <div class="timer">
+        {{ formatTime(currentTime) }}/{{ formatTime(currentTrack.duration) }}
+      </div>
+    </div>
+  </div>
+</div>

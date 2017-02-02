@@ -1,0 +1,35 @@
+page-profil {
+    .bar-buttons[start] {
+        order: 1 !important;
+    }
+    .toolbar-background {
+        background: #fff;
+    }
+    .header::after {
+        height: 0;
+        visibility: hidden;
+    }
+    #profil {
+        img {
+            border-radius: 50%;
+            width: 100px;
+            box-shadow: 0 0 1px 1px rgba(51, 51, 51, 0.38);
+            margin: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .info {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 15px;
+            .user-info {
+                font-size: 16px;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+    .tabs .tabbar {
+        background: #fff;
+    }
+}

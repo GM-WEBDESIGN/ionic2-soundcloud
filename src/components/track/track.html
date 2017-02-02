@@ -1,0 +1,48 @@
+<div class="track" (click)="selected(track)">
+  <ion-grid>
+    <ion-row class="track-header">
+      <ion-col width-20 class="thumbnail">
+        <img src="{{ track.user.avatar_url }}" alt="">
+      </ion-col>
+      <ion-col class="info">
+        <p>
+          <b>{{ track.user.username }}</b> à publié <b>un titre</b>
+        </p>
+        <p>il y a 6 heures</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="track-content">
+      <ion-col>
+        <img src="{{ checkArtwork(track.artwork_url) }}" alt="">
+        <div class="info">
+          <p class="artist">{{ track.user.username }}</p>
+          <br>
+          <p class="title">{{ track.title }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="track-pre-footer">
+      <ion-col width-75>
+        <p>#Soundtrack</p>
+      </ion-col>
+      <ion-col>
+        <p>{{ formatTime(track.duration) }}</p>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row class="track-footer">
+      <ion-col>
+        <ion-icon name="play"></ion-icon> {{ track.playback_count }}
+      </ion-col>
+      <ion-col width-10>
+        <ion-icon name="repeat"></ion-icon>
+      </ion-col>
+      <ion-col width-20>
+        <ion-icon name="heart"></ion-icon> {{ track.likes_count }}
+      </ion-col>
+      <ion-col width-10>
+        <ion-icon name="more"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
