@@ -12,7 +12,7 @@ declare var SC;
 @Injectable()
 export class Soundcloud {
 
-  private clientId: string = "0a6304ca71e84424d8e8e5e0947af8c5";
+  private clientId: string = "<CLIENT_ID>";
   private tracks: any[] = [];
   private playTrack: number = 0;
   public currentTrack: Track;
